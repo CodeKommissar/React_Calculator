@@ -1,0 +1,13 @@
+.Display {
+    height: 100px;
+    background-color: #463539;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 4rem;
+}
+
+.NumberDisplay {
+    padding-right: 1rem;    
+}
