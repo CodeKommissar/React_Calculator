@@ -1,21 +1,21 @@
 import React from "react";
 import "./SideButtons.css";
 
-import Button from "../../ui/Button/Button";
+import Button from "../../../ui/Button/Button";
 
-const SideButtons = () => {
+const SideButtons = (props) => {
     return (
         <div className="SideButtons">
-            <Button>
+            <Button onButtonClick={props.onMultiply}>
                 x
             </Button>
-            <Button>
+            <Button onButtonClick={props.onSubstract}>
                 –
             </Button>
-            <Button>
+            <Button onButtonClick={props.onAdd}>
                 +
             </Button>
-            <Button>
+            <Button onButtonClick={props.onResult}>
                 =
             </Button>
         </div>

@@ -3,19 +3,19 @@ import './TopButtons.css';
 
 import Button from "../../ui/Button/Button";
 
-const TopButtons = () => {
+const TopButtons = (props) => {
     return (
         <div className="TopButtons">
-            <Button>
+            <Button onButtonClick={props.onClear}>
                 Clear
             </Button>
-            <Button>
+            <Button onButtonClick={props.onDelete}>
                 ⌫
             </Button>
-            <Button>
+            <Button onButtonClick={props.onPlusMinus}>
                 ±
             </Button>
-            <Button>
+            <Button onButtonClick={props.onDivide}>
                 ÷
             </Button>
         </div>

@@ -3,7 +3,10 @@ import './Number.css';
 
 const Number = (props) => {
     return (
-        <div className="Number">
+        <div
+            onClick={() => props.onClickNumber(props.children)}
+            className="Number"
+        >
             {props.children}
         </div>
     );
