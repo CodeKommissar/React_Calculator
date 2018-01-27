@@ -108,7 +108,7 @@ class Calculator extends Component {
     if (!!this.state.mathOperator) {
       this.setState((prevState) => {
         const { firstNumber, secondNumber, mathOperator } = prevState;
-        const instruction = firstNumber + mathOperator + secondNumber;
+        const instruction = Number(firstNumber) + mathOperator + Number(secondNumber);
         const result = String(eval(instruction).toFixed(1));
 
         return {
