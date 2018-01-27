@@ -105,17 +105,20 @@ class Calculator extends Component {
   }
 
   handleResult = () => {
-    this.setState((prevState) => {
-      const { firstNumber, secondNumber, mathOperator } = prevState;
-      const instruction = firstNumber + mathOperator + secondNumber;
-      const result = String(eval(instruction).toFixed(1));
+    if (!!this.state.mathOperator) {
+      this.setState((prevState) => {
+        const { firstNumber, secondNumber, mathOperator } = prevState;
+        const instruction = firstNumber + mathOperator + secondNumber;
+        const result = String(eval(instruction).toFixed(1));
 
-      return {
-        firstNumber: result,
-        firstNumberActive: true,
-        secondNumber: ""
-      }
-    })
+        return {
+          firstNumber: result,
+          firstNumberActive: true,
+          secondNumber: "",
+          mathOperator: null
+        }
+      })
+    }
   }
 
   render() {
